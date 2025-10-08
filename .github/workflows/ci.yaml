@@ -1,14 +1,16 @@
-name: CI
+# CICD using GitHub actions
 
+name: CI/CD
+
+# Exclude the workflow to run on changes to the helm chart
 on:
- push:
-   branches:
+  push:
+    branches:
       - main
-   paths-ignore:
-     - 'Readme.md'
-     - 'helm/**'    
-     - 'k8s/**'
-     - 'README.md'
+    paths-ignore:
+      - 'helm/**'
+      - 'k8s/**'
+      - 'README.md'
 
 jobs:
 
